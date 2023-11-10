@@ -1,0 +1,407 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: lightgray;
+    height: 100vh;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+/* header style */
+
+header {
+    padding: 2rem;
+    text-decoration: none;
+}
+
+.logo {
+    height: 1rem;
+    width: 1rem;
+    padding: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+.logo img { 
+    width: 200px;   
+}
+
+header > .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;   
+}
+
+
+
+header a {
+    color: rgb(100, 100, 0);
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.2s;
+    font-size: 19px;
+    font-weight: bold;
+
+}
+
+header nav ul {
+    list-style-type: none;
+
+}
+
+header nav ul li {
+    display: inline-block;
+    padding: 0 100px;
+}
+
+button {
+    padding: 5px 12px 5px 12px;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: rgb(100, 100, 0);
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    color: white;
+    transition: 0.4s;
+    
+}
+
+button:hover {
+    background-color: rgb(180, 180, 0);
+    color: white;
+    box-shadow: 0px 0px 8px rgb(0, 0, 0);
+}
+
+
+header a:hover {
+    color: rgb(180, 180, 0);
+    transform: scale(1.10); /* zoom */
+
+}
+
+.img-profile {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.p1 {
+    display: flex;
+    position: relative;
+    
+}
+
+.text {
+    width: 80%;
+    padding: 100px;
+    font-size: 25px;
+}
+
+
+.profile-container {
+    position: absolute;
+    right:0;
+    width: 20%;
+}
+
+.img-profile {
+    position: absolute;
+    
+}
+
+.img-profile:hover + .cloud-box {
+    opacity: 1;
+    visibility: visible;  
+      
+}
+
+.cloud-box {
+    border-radius: 20px;
+    background-color: rgb(180, 180, 0);
+    color: lightgray;
+    padding: 10px;
+    position: absolute;
+    min-width: 10rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 1s, opacity 1s linear;
+
+}
+
+.cloud-box::after {
+    content: "";
+    position: absolute;
+    bottom: -42%;
+    border-bottom: 0;
+    right: 10%;
+    border: 15px solid transparent;
+    border-top-color: rgb(180, 180, 0);
+    
+}
+
+
+.container {
+    padding: 80px 4%;
+    height: 100vh;
+
+}
+.container .flex {
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.container h1 {
+    color: black;
+    font-size: 35px;
+    line-height: 40px;
+}
+
+.container .p1 h1 span {
+    color: rgb(180, 180, 0);
+    font-size: 3rem;
+}
+
+.container .p1 p {
+    color: black;
+    margin: 40px 0;
+}
+
+.btn-contact button:hover {
+    box-shadow: 0px 0px 8px black;
+    transform: scale(1.10); /* zoom */
+}
+
+.container .img-profile img {
+    position: relative;
+    animation: jump 2s ease-in-out infinite alternate;
+}
+
+/* skills style */
+
+ .container-skills {
+    padding: 40px 4%;
+
+ }
+
+ .container-skills .flex {
+    gap: 60px;
+ }
+
+ h2.title {
+    color: black;
+    font-size: 36px;
+    text-align: center;
+}
+
+h2.title span {
+    color: rgb(100, 100, 0);
+
+}
+
+.container-skills .skills-box {
+    color: black;
+    padding: 40px;
+    border: 2px solid lightgray;
+    margin-top: 40px;
+    border-radius: 20px;
+    transition: 0.4s;
+}
+
+.container-skills .skills-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px rgb(180, 180, 0)
+}
+
+.container-skills .skills-box i{
+    font-size: 70px;
+    color: rgb(100, 100, 0);
+}
+
+.container-skills .skills-box h3{
+    font-size: 26px;
+    margin: 20px 0;
+}
+
+/* about style*/
+
+.about {
+    padding: 80px 4%;
+
+}
+
+.about .flex {
+    align-items: center;
+    gap: 65px;
+}
+
+.about .text-about {
+    color: black;
+}
+
+.about .text-about h2 {
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+.about .text-about h2 span {
+    color: rgb(100, 100, 0);
+    display: block;
+}
+
+.about .text-about p {
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.about .text-about .btn-social button {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    border: none;
+    font-size: 20px;
+    margin: 0 5px;
+}
+
+/* form style */
+
+.contact-message .text-message h2 {
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+
+}
+
+ .contact-message  {
+    padding: 80px 4%;
+
+}
+
+ form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+ }
+
+ form input, form textarea {
+    width: 100%;
+    background-color: white;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: black;
+    font-size: 15px;
+ }
+
+ form input::placeholder {
+    color: gray;
+ }
+
+ form textarea {
+    resize: none;
+    max-height: 300px;
+ }
+
+ form .btn-send {
+    margin-top: 30px;
+ }
+
+ form .btn-send input[type=submit] {
+    width: 120px;
+    background-color: rgb(100, 100, 0);
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0px 0px 8px rgb(0, 0, 0);
+    transition: 0.4s;
+
+ }
+
+form .btn-send input[type=submit]:hover {
+    background-color: rgb(180, 180, 0);
+    transform: scale(1.10); /* zoom */
+}
+
+.logo-footer {
+    height: 10px;
+    width: 1rem;
+    padding: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+.logo-footer img {
+    width: 300px;
+}
+
+ footer {
+    padding: 50px 4%;
+    box-shadow: 0 0 10px 0px rgb(180, 180, 0);
+
+ }
+
+ footer .flex {
+    justify-content: space-between;
+ }
+
+ .line-footer {
+    padding: 10px 0;
+ }
+
+ .border {
+    border-top: 2px solid rgb(100, 100, 0)
+ }
+
+ footer .line-footer p i {
+    color: black;
+    font-size: 20px;
+    
+ }
+
+ footer .line-footer p a {
+    color: black;
+ }
+
+
+.line-footer .btn-social button {
+
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    border: none;
+    font-size: 20px;
+    margin: 0 5px;
+}
+
+
+@keyframes jump {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: 10px;
+    }
+}
